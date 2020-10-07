@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<style media="screen">
+body{
+  background: gold;
+  font-family: sans-serif;
+  font-weight: 100;
+  text-align: center;
+  border: 10px solid white;
+  margin: 0;
+}
+
+@@font-face {
+    font-family: 'ABC';
+    font-display: swap;
+    src: url(/Users/philipblair/Documents/HTML/neILzCirqoswsqX9zoKmM4MwWJU.woff2) format('woff'),
+}
+
+h1{
+    color: Black;
+    font-family: Arial Black;
+    font-weight: 200;
+    font-size: 40px;
+    margin: 40px 0px 20px;
+    text-align: center;
+    line-height: normal;
+}
+
+.h2 {
+    color: Black;
+    font-family: Arial Black;
+    font-weight: 200;
+    font-size: 40px;
+    margin: 40px 0px 20px;
+    text-align: center;
+    line-height: normal;
+}
+
+.smalltext{
+    color: black;
+    font-family:monospace;
+    color: Black;
+    font-size: 8px;
+    text-align: right;
+}
+
+#whatever{
+    margin: auto;
+    padding: 0%;
+    width: 100%;
+    background-color: white;
+}
+
+.day, .hour, .minute, .sec{
+    font-family:monospace;
+    color: black;
+    font-size: 50px;
+    display: inline-block;
+    padding: 2%;
+}
+.Spendentext {
+    font-family: Arial;
+    color: Black;
+    line-height: 1.8;
+}
+.Spendentext-fett {
+    font-family: Arial Black;
+    color: Black;
+    line-height: 1.8;
+}
+</style>
+  <head>
+    <title>HelloWorld</title>
+    <link rel="stylesheet" href="main.css">
+
+
+  </head>
+  <body>
+
+      <h1 >WIE LANGE ICH NICHT MEHR RAUCHE</h1>
+
+      <div id="clockdiv">
+          <script type="text/javascript">
+            const clock = document.getElementById("whatever");
+            function getTimeRemaining(){
+              const total = Date.parse(new Date()) - Date.parse('28 Sept 2020 03:00:00 GMT')
+              const seconds = Math.floor( (total/1000) % 60 );
+              const minutes = Math.floor( (total/1000/60) % 60 );
+              const hours = Math.floor( (total/(1000*60*60)) % 24 );
+              const days = Math.floor( total/(1000*60*60*24) );
+
+              return {
+                total,
+                days,
+                hours,
+                minutes,
+                seconds,
+              };
+            }
+            const t = getTimeRemaining()
+            const timeinterval = setInterval(() => {
+              const t = getTimeRemaining()
+              document.getElementById("d").innerHTML = t.days
+              document.getElementById("h").innerHTML = ('0' + t.hours).slice(-2)
+              document.getElementById("m").innerHTML = ('0' + t.minutes).slice(-2)
+              document.getElementById("s").innerHTML = ('0' + t.seconds).slice(-2)
+                    },1000);
+            </script>
+
+      </div>
+
+      <div id="whatever">
+        <div class="day">
+            <div id="d">
+              <script type="text/javascript">
+                document.getElementById("d").innerHTML = t.days
+              </script>
+            </div>
+            <div class="smalltext">
+              DAYS
+            </div>
+          </div>
+        <div class="hour">
+          <div id="h">
+            <script type="text/javascript">
+              document.getElementById("h").innerHTML = t.hours
+            </script>
+          </div>
+          <div class="smalltext">
+            HOURS
+          </div>
+        </div>
+        <div class="minute">
+          <div id="m">
+            <script type="text/javascript">
+              document.getElementById("m").innerHTML = t.minutes
+            </script>
+          </div>
+          <div class="smalltext">
+            MINUTES
+          </div>
+        </div>
+        <div class="sec">
+          <div id="s">
+            <script type="text/javascript">
+              document.getElementById("s").innerHTML = t.seconds
+            </script>
+          </div>
+          <div class="smalltext">
+            SECONDS
+          </div>
+        </div>
+      </div>
+
+<br>
+
+      <p, class = "Spendentext-fett">
+      Und damit das so bleibt kannst du folgende Wette eingehen:
+      </p>
+<p, class = "Spendentext">
+
+Du spendest Geld. Wie viel ist egal. Wohin ist egal.
+<br>
+Sollte ich wieder eine Zigratte
+rauchen, so bekommst du das Geld wieder zurück.
+<br>
+Sollte ich keine Zigarette mehr rauchen,
+hast du im schlimmsten Fall Geld gespendet.
+</p>
+
+
+
+      <p , class = "h2"> WIE VIEL GESPENDET WURDE</p>
+
+
+
+<div id="whatever">
+  <div class="day">
+    0.00
+  </div>
+  <div class="day">
+    €
+  </div>
+</div>
+
+<br>
+
+
+  </body>
+</html>
